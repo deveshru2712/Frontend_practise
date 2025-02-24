@@ -13,6 +13,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos libero vero dolorum itaque ducimus perferendis deleniti adipisci quaerat corporis ipsa, distinctio quia eveniet nihil accusantium atque dolor et, labore saepe?",
     image: Img1,
     published: "Jan 20 2025 by Tom",
+    aosDelay: "0",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos libero vero dolorum itaque ducimus perferendis deleniti adipisci quaerat corporis ipsa, distinctio quia eveniet nihil accusantium atque dolor et, labore saepe?",
     image: Img2,
     published: "Jan 20 2025 by Tom",
+    aosDelay: "200",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos libero vero dolorum itaque ducimus perferendis deleniti adipisci quaerat corporis ipsa, distinctio quia eveniet nihil accusantium atque dolor et, labore saepe?",
     image: Img3,
     published: "Jan 20 2025 by Tom",
+    aosDelay: "400",
   },
 ];
 
@@ -41,7 +44,12 @@ const Blog = () => {
         {/* blog section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7">
           {BlogData.map((data) => (
-            <div key={data.id} className="bg-whit dark:bg-gray-900">
+            <div
+              key={data.id}
+              data-aos="fade-up"
+              data-aos-delay={data.aosDelay}
+              className="bg-whit dark:bg-gray-900"
+            >
               {/* img section */}
               <div className="overflow-hidden rounded-2xl mb-2">
                 <img

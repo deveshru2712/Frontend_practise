@@ -7,7 +7,10 @@ import Brand5 from "../../assets/brand/br-5.png";
 
 const Partner = () => {
   return (
-    <div className="py-8 mt-24 hidden md:block bg-gray-200 dark:bg-white/10">
+    <div
+      data-aos="zoom-out"
+      className="py-8 mt-24 hidden md:block bg-gray-200 dark:bg-white/10"
+    >
       <div className="container">
         <div className="grid grid-cols-5 gap-3 place-content-center opacity-50">
           <img src={Brand1} alt="Brand1" className="w-[80px] dark:invert" />
